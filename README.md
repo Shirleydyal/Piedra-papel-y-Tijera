@@ -4,9 +4,9 @@ Juego Piedra👊 papel✋ y Tijera✌
 Divierte y juega con la maquina., se te va a presentar.
 3 opciones por ejemplo.
 
-- Papel
-- Tijera
-- Piedra
+- Papel  ✋
+- Tijera ✌
+- Piedra 👊
 
 Por el momento no recomiendo ningun MIT
 
