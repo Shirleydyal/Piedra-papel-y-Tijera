@@ -70,55 +70,51 @@ function cargarPiedra()
 function dibujarPa()
 {
   if(pa.cargaOK)
-  {
-    papeldib.drawImage(pa.imagen, 40, 0);
-    var resu = aleatorio(1, 3);
-    console.log(resu);
-    if (resu == 1)
     {
-    papeldib.drawImage(pa.imagen, 40, 0);
-    papeldib.drawImage(pa.imagen, 220, 0); 
-    mensaje1.innerHTML = "Tu opcion fue: PAPEL y Maquina fue: PAPEL ";
-    mensaje2.innerHTML = "Resultado: ****EMPATE**** ";
+      papeldib.drawImage(pa.imagen, 40, 0);
+      var resu = aleatorio(1, 3);
+      console.log(resu);
+      if (resu == 1)
+      {
+      papeldib.drawImage(pa.imagen, 220, 0); 
+      mensaje1.innerHTML = "Tu opcion fue: PAPEL y Maquina fue: PAPEL ";
+      mensaje2.innerHTML = "Resultado: ****EMPATE**** ";
+      }
+      if (resu == 2)
+      {
+      papeldib.drawImage(ti.imagen, 220, 0); 
+      mensaje1.innerHTML = "Tu opcion fue: PAPEL y Maquina fue: TIJERA ";
+      mensaje2.innerHTML = "Resultado: ****GANO MAQUINA**** ";
+      }
+      if (resu == 3)
+      {
+      papeldib.drawImage(pie.imagen, 220, 0); 
+      mensaje1.innerHTML = "Tu opcion fue: PAPEL y Maquina fue: PIEDRA ";
+      mensaje2.innerHTML = "Resultado: ****TU GANASTE**** ";
+      }
     }
-    if (resu == 2)
-    {
-    papeldib.drawImage(pa.imagen, 40, 0);
-    papeldib.drawImage(ti.imagen, 220, 0); 
-    mensaje1.innerHTML = "Tu opcion fue: PAPEL y Maquina fue: TIJERA ";
-    mensaje2.innerHTML = "Resultado: ****GANO MAQUINA**** ";
-    }
-    if (resu == 3)
-    {
-    papeldib.drawImage(pa.imagen, 40, 0);
-    papeldib.drawImage(pie.imagen, 220, 0); 
-    mensaje1.innerHTML = "Tu opcion fue: PAPEL y Maquina fue: PIEDRA ";
-    mensaje2.innerHTML = "Resultado: ****TU GANASTE**** ";
-    }
-    }
-    
-    }
+}
  
 function dibujarTij()
 {
-   if(ti.cargaOK)
+  if(ti.cargaOK)
   {
     papeldib.drawImage(ti.imagen, 40, 0);
     var resu = aleatorio(1, 3);
     console.log(resu);
-        if (resu == 1)
+      if (resu == 1)
       {
       papeldib.drawImage(pa.imagen, 220, 0);
       mensaje1.innerHTML = "tu opcion fue TIJERA y Maquina fue PAPEL ";
       mensaje2.innerHTML = "Resultado: ****TU GANASTE**** ";
       }
-        if (resu == 2)
+      if (resu == 2)
       {
       papeldib.drawImage(ti.imagen, 220, 0); 
       mensaje1.innerHTML = "tu opcion fue TIJERA y Maquina fue TIJERA";
       mensaje2.innerHTML = "Resultado: ****EMPATE**** "
       }
-        if(resu == 3)
+      if(resu == 3)
       {
       papeldib.drawImage(pie.imagen, 220, 0); 
       mensaje1.innerHTML = "tu opcion fue TIJERA y Maquina fue PIEDRA";
