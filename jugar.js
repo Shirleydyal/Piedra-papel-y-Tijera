@@ -13,7 +13,9 @@ var papeldib = dib.getContext("2d");
 var mensaje1 = document.getElementById("mensaje1");
 var mensaje2 = document.getElementById("mensaje2");
 
-
+var x = 40;
+var y= 200;
+var s = 0;
 
 var pa = {
   url:"imagenes/papel.png",
@@ -52,103 +54,91 @@ pie.imagen.addEventListener("load", cargarPiedra);
 function cargarPapel()
 {
   pa.cargaOK = true;
-  dibujarPa();
-}
-
-function cargarTijera()
-{
-  ti.cargaOK = true;
-  dibujarTij();
-}
-
-function cargarPiedra()
-{
-  pie.cargaOK = true;
-  dibujarPie();
-}
-
-function dibujarPa()
-{
   if(pa.cargaOK)
     {
-      papeldib.drawImage(pa.imagen, 40, 0);
+      papeldib.drawImage(pa.imagen, x, s);
       var resu = aleatorio(1, 3);
       console.log(resu);
       if (resu == 1)
       {
-      papeldib.drawImage(pa.imagen, 220, 0); 
+      papeldib.drawImage(pa.imagen, y, s); 
       mensaje1.innerHTML = "Tu opcion fue: PAPEL y Maquina fue: PAPEL ";
       mensaje2.innerHTML = "Resultado: ****EMPATE**** ";
       }
       if (resu == 2)
       {
-      papeldib.drawImage(ti.imagen, 220, 0); 
+      papeldib.drawImage(ti.imagen, y, s); 
       mensaje1.innerHTML = "Tu opcion fue: PAPEL y Maquina fue: TIJERA ";
       mensaje2.innerHTML = "Resultado: ****GANO MAQUINA**** ";
       }
       if (resu == 3)
       {
-      papeldib.drawImage(pie.imagen, 220, 0); 
+      papeldib.drawImage(pie.imagen, y, s); 
       mensaje1.innerHTML = "Tu opcion fue: PAPEL y Maquina fue: PIEDRA ";
       mensaje2.innerHTML = "Resultado: ****TU GANASTE**** ";
       }
     }
 }
- 
-function dibujarTij()
+
+function cargarTijera()
 {
+  ti.cargaOK = true;
   if(ti.cargaOK)
   {
-    papeldib.drawImage(ti.imagen, 40, 0);
+    papeldib.drawImage(ti.imagen, x, s);
     var resu = aleatorio(1, 3);
     console.log(resu);
       if (resu == 1)
       {
-      papeldib.drawImage(pa.imagen, 220, 0);
+      papeldib.drawImage(pa.imagen, y, s);
       mensaje1.innerHTML = "tu opcion fue TIJERA y Maquina fue PAPEL ";
       mensaje2.innerHTML = "Resultado: ****TU GANASTE**** ";
       }
       if (resu == 2)
       {
-      papeldib.drawImage(ti.imagen, 220, 0); 
+      papeldib.drawImage(ti.imagen, y, s); 
       mensaje1.innerHTML = "tu opcion fue TIJERA y Maquina fue TIJERA";
       mensaje2.innerHTML = "Resultado: ****EMPATE**** "
       }
       if(resu == 3)
       {
-      papeldib.drawImage(pie.imagen, 220, 0); 
+      papeldib.drawImage(pie.imagen, y, s); 
       mensaje1.innerHTML = "tu opcion fue TIJERA y Maquina fue PIEDRA";
       mensaje2.innerHTML = "Resultado: ****GANO MAQUINA**** ";
       }
   }
 }
 
-function dibujarPie(){
+function cargarPiedra()
+{
+  pie.cargaOK = true;
   if (pie.cargaOK)
   {
-    papeldib.drawImage(pie.imagen, 40, 0);
+    papeldib.drawImage(pie.imagen, x, s);
     var resu = aleatorio(1, 3);
     console.log(resu);
     if (resu == 1)
     {
-    papeldib.drawImage(pa.imagen, 220, 0); 
+    papeldib.drawImage(pa.imagen, y, s); 
     mensaje1.innerHTML = "Tu opcion fue PIEDRA y Maquina fue PAPEL ";
     mensaje2.innerHTML = "Resultado: ****GANO MAQUINA****";
         }
         if(resu == 2)
         {
-        papeldib.drawImage(ti.imagen, 220, 0); 
+        papeldib.drawImage(ti.imagen, y, s); 
         mensaje1.innerHTML = "tu opcion fue PIEDRA y Maquina fue TIJERA ";
-        mensaje2.innerHTML = "Resultado: ****TU GANASTE ";
+        mensaje2.innerHTML = "Resultado: ****TU GANASTE***** ";
         }
         if(resu == 3)
         {
-        papeldib.drawImage(pie.imagen, 220, 0); 
+        papeldib.drawImage(pie.imagen, y, s); 
         mensaje1.innerHTML = "tu opcion fue PIEDRA y Maquina fue PIEDRA";
         mensaje2.innerHTML = "Resultado: ****EMPATE**** ";
         }
     }
-  }  
+}
+
+ 
 
 
   
