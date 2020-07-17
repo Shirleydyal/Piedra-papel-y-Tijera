@@ -16,15 +16,15 @@ var mensaje2 = document.getElementById("mensaje2");
 
 
 var pa = {
-  url:"papel.png",
+  url:"imagenes/papel.png",
   cargaOK: false
 }
 var ti = {
-  url: "tijera.png",
+  url: "imagenes/tijera.png",
   cargaOK: false
 }
 var pie = {
-  url: "piedra.png",
+  url: "imagenes/piedra.png",
   cargaOK: false
 };
 
