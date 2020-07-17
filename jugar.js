@@ -91,13 +91,13 @@ function cargarTijera()
       if (resu == 1)
       {
       papeldib.drawImage(pa.imagen, y, s);
-      mensaje1.innerHTML = "tu opcion fue TIJERA y Maquina fue PAPEL ";
+      mensaje1.innerHTML = "Tu opcion fue TIJERA y Maquina fue PAPEL ";
       mensaje2.innerHTML = "Resultado: ****TU GANASTE**** ";
       }
       if (resu == 2)
       {
       papeldib.drawImage(ti.imagen, y, s); 
-      mensaje1.innerHTML = "tu opcion fue TIJERA y Maquina fue TIJERA";
+      mensaje1.innerHTML = "Tu opcion fue TIJERA y Maquina fue TIJERA";
       mensaje2.innerHTML = "Resultado: ****EMPATE**** "
       }
       if(resu == 3)
@@ -126,13 +126,13 @@ function cargarPiedra()
         if(resu == 2)
         {
         papeldib.drawImage(ti.imagen, y, s); 
-        mensaje1.innerHTML = "tu opcion fue PIEDRA y Maquina fue TIJERA ";
+        mensaje1.innerHTML = "Tu opcion fue PIEDRA y Maquina fue TIJERA ";
         mensaje2.innerHTML = "Resultado: ****TU GANASTE***** ";
         }
         if(resu == 3)
         {
         papeldib.drawImage(pie.imagen, y, s); 
-        mensaje1.innerHTML = "tu opcion fue PIEDRA y Maquina fue PIEDRA";
+        mensaje1.innerHTML = "Tu opcion fue PIEDRA y Maquina fue PIEDRA";
         mensaje2.innerHTML = "Resultado: ****EMPATE**** ";
         }
     }
