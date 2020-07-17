@@ -37,6 +37,7 @@ pa.imagen = new Image();
 pa.imagen.src = pa.url;
 pa.imagen.addEventListener("load", cargarPapel);
 }
+
 function juegoTijera()
 {
 ti.imagen = new Image();
@@ -49,6 +50,7 @@ function juegoPiedra()
 pie.imagen = new Image();
 pie.imagen.src = pie.url;
 pie.imagen.addEventListener("load", cargarPiedra);
+
 }
 
 function cargarPapel()
@@ -114,9 +116,12 @@ function cargarPiedra()
   pie.cargaOK = true;
   if (pie.cargaOK)
   {
+    ti.cargaOK = true;
+    pa.cargaOK = true;
     papeldib.drawImage(pie.imagen, x, s);
     var resu = aleatorio(1, 3);
     console.log(resu);
+    
     if (resu == 1)
     {
     papeldib.drawImage(pa.imagen, y, s); 
